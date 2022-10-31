@@ -25,7 +25,7 @@
 
             <TabControl Grid.Row="0" Grid.Column="0">
                 <TabItem Header="Список объектов" >
-                    <DataGrid x:Name="dataTab" AutoGenerateColumns="False" CanUserAddRows="False" ItemsSource= "{Binding Path=Anomalyes}" MouseDown="dataTab_MouseDown" >
+                    <DataGrid x:Name="dataTab" AutoGenerateColumns="False" CanUserAddRows="False" ItemsSource= "{Binding Path=Anomalyes}" MouseDown="dataTab_MouseDown" CellEditEnding="dataTab_CellEditEnding">
                         <DataGrid.Columns>
                             <DataGridTextColumn Header="Name" Binding="{Binding Name}" IsReadOnly="True"></DataGridTextColumn>
                             <DataGridTextColumn Header="Distance" Binding="{Binding Distance}"></DataGridTextColumn>
@@ -37,7 +37,7 @@
                     </DataGrid>
                 </TabItem>
                 <TabItem Header="Схема расположения оъектов">
-                    <Canvas x:Name="Map" Background="LightGray">
+                    <Canvas x:Name="Map" Background="LightGray" MouseWheel="Map_MouseWheel">
 
                     </Canvas>
                 </TabItem>

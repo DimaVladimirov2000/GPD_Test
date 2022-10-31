@@ -216,5 +216,16 @@ public partial class MainWindow : Window
         {
             infoPanel.Text = ((Anomaly)(((Rectangle)sender).Tag)).ToString();
         }
+
+        private void Map_MouseWheel(object sender, MouseWheelEventArgs e)
+        {
+            
+
+        }
+
+        private void dataTab_CellEditEnding(object sender, DataGridCellEditEndingEventArgs e)
+        {
+            DrawAnomalyesMap();
+        }
     }
 }
